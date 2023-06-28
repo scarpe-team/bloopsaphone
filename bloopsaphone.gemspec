@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name = 'bloopsaphone'
+  s.name = 'bloops'
   s.version = '0.5'
  
   s.authors = ["why the lucky stiff"]

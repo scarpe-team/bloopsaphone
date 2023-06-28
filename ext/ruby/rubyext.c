@@ -272,6 +272,7 @@ Init_bloops()
   rb_const_set(cBloops, rb_intern("NOISE"), INT2NUM(BLOOPS_NOISE));
 
   cSound = rb_define_class_under(cBloops, "Sound", rb_cObject);
+  rb_undef_alloc_func(cSound);
   rb_define_method(cSound, "initialize_copy", rb_bloops_sound_copy, 1);
   rb_define_method(cSound, "to_s", rb_bloops_sound_str, 0);
   rb_define_method(cSound, "reset", rb_bloops_reset, 0);
@@ -328,5 +329,6 @@ Init_bloops()
   rb_define_method(cSound, "volume=", rb_bloops_set_volume, 1);
 
   cTrack = rb_define_class_under(cBloops, "Track", rb_cObject);
+  rb_undef_alloc_func(cTrack);
   rb_define_method(cTrack, "to_s", rb_bloops_track_str, 0);
 }
